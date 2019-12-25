@@ -1,6 +1,5 @@
 document.onkeydown = Movement;
 
-
 function Movement(e) {
 
     e = e || window.event;
@@ -14,35 +13,25 @@ function Movement(e) {
         if (valid) {
             document.getElementById('characterIcon').style.top = parseInt(crrTop) - 30;
         }
-
     }
     else if (e.keyCode == '40') {//down
         var valid = validateMovement(crrLeft, crrTop, 'down')
         if (valid) {
-
             document.getElementById('characterIcon').style.top = parseInt(crrTop) + 30;
         }
-
     }
     else if (e.keyCode == '37') {//left
         var valid = validateMovement(crrLeft, crrTop, 'left')
         if (valid) {
-
             document.getElementById('characterIcon').style.left = parseInt(crrLeft) - 30;
         }
-
     }
     else if (e.keyCode == '39') {//right
-
         var valid = validateMovement(crrLeft, crrTop, 'right')
         if (valid) {
             document.getElementById('characterIcon').style.left = parseInt(crrLeft) + 30;
         }
-
     }
-
-
-
 }
 
 function validateMovement(left, top, action) {
